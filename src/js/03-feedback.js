@@ -25,8 +25,8 @@ function showPreviosDataForm() {
     const messageObj = localStorage.getItem(LOCALSTORAGE_KEY)
     const message = JSON.parse(messageObj);
     if (message) {
-        inputEl.value = message.email;
-        commentEl.value = message.message;
+        inputEl.value = message.email || '';
+        commentEl.value = message.message || '';
     }
 };
 
