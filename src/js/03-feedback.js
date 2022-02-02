@@ -17,17 +17,17 @@ const fomrSubmitHandler =(e)=>{
     
 }
 const formInputHandler=()=>{
-    const formValuesStorage = {
+    const enteredFormData = {
         email: inputEl.value,
         message: commentEl.value,
       };
-    localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(formValuesStorage));   
+    localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(enteredFormData));   
 }
 
 function showPreviosDataForm() {
     const messageObj = localStorage.getItem(LOCALSTORAGE_KEY)
     const message = JSON.parse(messageObj);
-    if(message){
+    if(message) {
         inputEl.value = message.email || '';
         commentEl.value = message.message || '';
     }
